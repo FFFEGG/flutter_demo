@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/demo/basic_demo.dart';
 import 'package:flutter_demo/demo/bottom_nabigation_demo.dart';
 import 'package:flutter_demo/demo/drawer_demo.dart';
+import 'package:flutter_demo/demo/layout_demo.dart';
 import 'package:flutter_demo/demo/listviewdemo.dart';
 
 void main() => runApp(App());
@@ -72,7 +73,7 @@ class Home extends StatelessWidget {
               children: <Widget>[
                 ListViewdemo(),
                 BasicDemo(),
-                Icon(Icons.departure_board, size: 128.0, color: Colors.black12),
+                LayoutDemo(),
               ],
             ),
             drawer: DrawerDemo(),

@@ -86,7 +86,8 @@ class ContainerDemo  extends StatelessWidget {
               border: Border.all(
                   color: Colors.deepPurple[100],
                   width: 2.0,
-                  style: BorderStyle.solid),
+                  style: BorderStyle.solid
+              ),
               //圆角
 //                borderRadius: BorderRadius.circular(30.0),
 //                borderRadius: BorderRadius.only(
