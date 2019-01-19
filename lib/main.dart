@@ -1,79 +1,82 @@
 import 'package:flutter/material.dart';
-import 'model/post.dart';
-
+import 'package:flutter_demo/demo/bottom_nabigation_demo.dart';
+import 'package:flutter_demo/demo/drawer_demo.dart';
+import 'package:flutter_demo/demo/listviewdemo.dart';
 
 void main() => runApp(App());
-
-
 
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(//mataerial风格
+    return MaterialApp(
+      //mataerial风格
       home: Home(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.yellow//主题颜色
-      ),
+          primarySwatch: Colors.pink, //主题颜色
+          highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+          splashColor: Colors.white70),
     );
   }
 }
-
 
 class Home extends StatelessWidget {
-
-  Widget _listitemBuilder (BuildContext context, int index) {
-      return Container(
-        color: Colors.white,
-        margin: EdgeInsets.all(8.0),
-        child: Column(
-          children: <Widget>[
-            Image.network(posts[index].imageUrl),
-            SizedBox(height: 18.0),
-            Text(
-              posts[index].title,
-              style: Theme.of(context).textTheme.title,
-            ),
-            Text(
-              posts[index].author,
-              style: Theme.of(context).textTheme.subhead,
-            ),
-            SizedBox(height: 18.0)
-          ],
-        ),
-      );
-  }
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(//脚手架
-      backgroundColor: Colors.grey[100],
-      appBar: AppBar(//导航Appbar
-        title: Text('flutter学习'),
-        elevation: 1.0,//导航栏阴影
-      ),
-      body: ListView.builder(
-        itemCount: posts.length,
-        itemBuilder: _listitemBuilder,
-      ),//主体
-    );
-  }
-}
-
-
-class Hello extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'hello',
-        textDirection: TextDirection.ltr,//从左至右
-        style: TextStyle(//文字style
-            fontSize: 40.0,//大小
-            fontWeight: FontWeight.bold,//加粗
-            color: Colors.black87//颜色
-        ),
-      ),
+    return DefaultTabController(
+        length: 3,
+        child: Scaffold(
+            //脚手架
+            backgroundColor: Colors.grey[100],
+            appBar: AppBar(
+              //导航Appbar
+//            leading: IconButton(
+//                icon: Icon(Icons.menu),
+//                tooltip: 'Navigation',
+//                onPressed: () => debugPrint('点击菜单按钮')),
+              title: Text('flutter学习'),
+              elevation: 0.0,
+              //导航栏阴影
+              actions: <Widget>[
+                IconButton(
+                    icon: Icon(Icons.search),
+                    tooltip: 'Search',
+                    onPressed: () => debugPrint('点击搜索按钮')),
+              ],
+              bottom: TabBar(
+                //激活状态
+                unselectedLabelColor: Colors.black38,
+                //选中下先
+                indicatorColor: Colors.black54,
+                //大小
+                indicatorSize: TabBarIndicatorSize.label,
+                //宽度
+                indicatorWeight: 1.0,
+                tabs: <Widget>[
+                  Tab(
+                    icon: Icon(Icons.airport_shuttle),
+                  ),
+                  Tab(
+                    icon: Icon(Icons.card_giftcard),
+                  ),
+                  Tab(
+                    icon: Icon(Icons.departure_board),
+                  ),
+                ],
+              ),
+            ),
+            body: TabBarView(
+              children: <Widget>[
+                ListViewdemo(),
+                Icon(Icons.card_giftcard, size: 128.0, color: Colors.black12),
+                Icon(Icons.departure_board, size: 128.0, color: Colors.black12),
+              ],
+            ),
+            drawer: DrawerDemo(),
+            bottomNavigationBar: BottomNavigationBarDemo()
+        )
     );
   }
 }
