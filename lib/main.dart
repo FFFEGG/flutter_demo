@@ -4,6 +4,7 @@ import 'package:flutter_demo/demo/bottom_nabigation_demo.dart';
 import 'package:flutter_demo/demo/drawer_demo.dart';
 import 'package:flutter_demo/demo/layout_demo.dart';
 import 'package:flutter_demo/demo/listviewdemo.dart';
+import 'package:flutter_demo/demo/view_demo.dart';
 
 void main() => runApp(App());
 
@@ -28,7 +29,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
             //脚手架
             backgroundColor: Colors.grey[100],
@@ -66,6 +67,9 @@ class Home extends StatelessWidget {
                   Tab(
                     icon: Icon(Icons.departure_board),
                   ),
+                  Tab(
+                    icon: Icon(Icons.view_quilt),
+                  ),
                 ],
               ),
             ),
@@ -74,6 +78,7 @@ class Home extends StatelessWidget {
                 ListViewdemo(),
                 BasicDemo(),
                 LayoutDemo(),
+                ViewDemo(),
               ],
             ),
             drawer: DrawerDemo(),
