@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/demo/basic_demo.dart';
 import 'package:flutter_demo/demo/bottom_nabigation_demo.dart';
 import 'package:flutter_demo/demo/drawer_demo.dart';
+import 'package:flutter_demo/demo/form_demo.dart';
 import 'package:flutter_demo/demo/layout_demo.dart';
 import 'package:flutter_demo/demo/listviewdemo.dart';
 import 'package:flutter_demo/demo/navigator_demo.dart';
@@ -15,7 +16,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //mataerial风格
-     home: Home(),
+     home: FormDemo(),
 //     home: NavigatorDemo(),
 //      initialRoute: '/about',
 //      routes: {
