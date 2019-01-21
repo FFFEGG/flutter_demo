@@ -4,6 +4,7 @@ import 'package:flutter_demo/demo/bottom_nabigation_demo.dart';
 import 'package:flutter_demo/demo/drawer_demo.dart';
 import 'package:flutter_demo/demo/layout_demo.dart';
 import 'package:flutter_demo/demo/listviewdemo.dart';
+import 'package:flutter_demo/demo/sliver_demo.dart';
 import 'package:flutter_demo/demo/view_demo.dart';
 
 void main() => runApp(App());
@@ -77,8 +78,8 @@ class Home extends StatelessWidget {
               children: <Widget>[
                 ListViewdemo(),
                 BasicDemo(),
-                LayoutDemo(),
-                ViewDemo(),
+                SliverGridDemos(),
+                SliverDemo(),
               ],
             ),
             drawer: DrawerDemo(),
