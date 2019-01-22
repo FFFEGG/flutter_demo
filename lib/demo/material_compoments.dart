@@ -14,6 +14,8 @@ import 'package:flutter_demo/demo/radio_demo.dart';
 import 'package:flutter_demo/demo/simple_dialog_demo.dart';
 import 'package:flutter_demo/demo/slider_demo.dart';
 import 'package:flutter_demo/demo/snackbar_demo.dart';
+import 'package:flutter_demo/demo/state/scoped_model_demo.dart';
+import 'package:flutter_demo/demo/state/state_management_demo.dart';
 import 'package:flutter_demo/demo/stepper_demo.dart';
 import 'package:flutter_demo/demo/switch_demo.dart';
 
@@ -25,86 +27,101 @@ class MaterialCompomentsDmoe extends StatelessWidget {
         title: Text('MaterialCompomentsDmoe'),
         elevation: 0.0,
       ),
-      body: ListView(
-        children: <Widget>[
-          ListItem(
-            title: 'ExpansionpanelDemo',
-            page: ExpansionpanelDemo(),
-          ),
-          ListItem(
-            title: 'SnackBarDemo',
-            page: SnackBarDemo(),
-          ),
-          ListItem(
-            title: 'BottomSheetDemo',
-            page: BottomSheetDemo(),
-          ),
-          ListItem(
-            title: 'AlertDialogDemo',
-            page: AlertDialogDemo(),
-          ),
-          ListItem(
-            title: 'SimpleDialogDemo',
-            page: SimpleDialogDemo(),
-          ),
-          ListItem(
-            title: 'button',
-            page: PageDemo(),
-          ),
-          ListItem(
-            title: 'ButtomDemo',
-            page: ButtomDemo(),
-          ),
-          ListItem(
-            title: 'PopupMenuButtonDemo',
-            page: PopupMenuButtonDemo(),
-          ),
-          ListItem(
-            title: 'FormDemo',
-            page: FormDemo(),
-          ),
-          ListItem(
-            title: 'CheckBoxDemo',
-            page: CheckBoxDemo(),
-          ),
-          ListItem(
-            title: 'RadioDemo',
-            page: RadioDemo(),
-          ),
-          ListItem(
-            title: 'SwitchDemo',
-            page: SwitchDemo(),
-          ),
-          ListItem(
-            title: 'SliderDemo',
-            page: SliderDemo(),
-          ),
-          ListItem(
-            title: 'DateTimeDemo',
-            page: DateTimeDemo(),
-          ),
-          Divider(),
-          ListItem(
-            title: 'ChipDemo',
-            page: ChipDemo(),
-          ),
-          ListItem(
-            title: 'DataTableDemo',
-            page: DataTableDemo(),
-          ),
-          ListItem(
-            title: 'PaginatedDataTableDemo',
-            page: PaginatedDataTableDemo(),
-          ),
-          ListItem(
-            title: 'CardDemo',
-            page: CardDemo(),
-          ),
-          ListItem(
-            title: 'StepperDemo',
-            page: StepperDemo(),
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
+          children: <Widget>[
+            ListItem(
+              title: 'ExpansionpanelDemo',
+              page: ExpansionpanelDemo(),
+            ),
+            ListItem(
+              title: 'SnackBarDemo',
+              page: SnackBarDemo(),
+            ),
+            ListItem(
+              title: 'BottomSheetDemo',
+              page: BottomSheetDemo(),
+            ),
+            ListItem(
+              title: 'AlertDialogDemo',
+              page: AlertDialogDemo(),
+            ),
+            ListItem(
+              title: 'SimpleDialogDemo',
+              page: SimpleDialogDemo(),
+            ),
+            ListItem(
+              title: 'button',
+              page: PageDemo(),
+            ),
+            ListItem(
+              title: 'ButtomDemo',
+              page: ButtomDemo(),
+            ),
+            ListItem(
+              title: 'PopupMenuButtonDemo',
+              page: PopupMenuButtonDemo(),
+            ),
+            ListItem(
+              title: 'FormDemo',
+              page: FormDemo(),
+            ),
+            ListItem(
+              title: 'CheckBoxDemo',
+              page: CheckBoxDemo(),
+            ),
+            ListItem(
+              title: 'RadioDemo',
+              page: RadioDemo(),
+            ),
+            ListItem(
+              title: 'SwitchDemo',
+              page: SwitchDemo(),
+            ),
+            ListItem(
+              title: 'SliderDemo',
+              page: SliderDemo(),
+            ),
+            ListItem(
+              title: 'DateTimeDemo',
+              page: DateTimeDemo(),
+            ),
+            Divider(),
+            ListItem(
+              title: 'ChipDemo',
+              page: ChipDemo(),
+            ),
+            ListItem(
+              title: 'DataTableDemo',
+              page: DataTableDemo(),
+            ),
+            ListItem(
+              title: 'PaginatedDataTableDemo',
+              page: PaginatedDataTableDemo(),
+            ),
+            ListItem(
+              title: 'CardDemo',
+              page: CardDemo(),
+            ),
+            ListItem(
+              title: 'StepperDemo',
+              page: StepperDemo(),
+            ),
+            Divider(),
+            Center(
+              child: Text('状态管理'),
+            ),
+            ListItem(
+              title: 'StateManagementDemo',
+              page: StateManagementDemo(),
+            ),
+            ListItem(
+              title: 'ScopedModelDemo',
+              page: ScopedModelDemo(),
+            ),
+          ],
+        ),
       ),
     );
   }
