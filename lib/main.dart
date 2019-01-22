@@ -5,6 +5,7 @@ import 'package:flutter_demo/demo/drawer_demo.dart';
 import 'package:flutter_demo/demo/form_demo.dart';
 import 'package:flutter_demo/demo/layout_demo.dart';
 import 'package:flutter_demo/demo/listviewdemo.dart';
+import 'package:flutter_demo/demo/material_compoments.dart';
 import 'package:flutter_demo/demo/navigator_demo.dart';
 import 'package:flutter_demo/demo/sliver_demo.dart';
 import 'package:flutter_demo/demo/view_demo.dart';
@@ -16,13 +17,14 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //mataerial风格
-     home: FormDemo(),
+//     home: Home(),
 //     home: NavigatorDemo(),
-//      initialRoute: '/about',
-//      routes: {
-//        '/': (context) => NavigatorDemo(),
-//        '/about': (context) => Page(title: 'Abuout')
-//      },
+      initialRoute: '/mdc',
+      routes: {
+        '/': (context) => NavigatorDemo(),
+        '/about': (context) => Page(title: 'Abuout'),
+        '/mdc': (context) => MaterialCompomentsDmoe(),
+      },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: Colors.pink, //主题颜色
