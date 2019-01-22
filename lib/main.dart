@@ -17,14 +17,14 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //mataerial风格
-//     home: Home(),
+      home: Home(),
 //     home: NavigatorDemo(),
-      initialRoute: '/mdc',
-      routes: {
-        '/': (context) => NavigatorDemo(),
-        '/about': (context) => Page(title: 'Abuout'),
-        '/mdc': (context) => MaterialCompomentsDmoe(),
-      },
+//      initialRoute: '/mdc',
+//      routes: {
+//        '/': (context) => NavigatorDemo(),
+//        '/about': (context) => Page(title: 'Abuout'),
+//        '/mdc': (context) => MaterialCompomentsDmoe(),
+//      },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: Colors.pink, //主题颜色
@@ -40,7 +40,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 4,
+        length: 5,
         child: Scaffold(
             //脚手架
             backgroundColor: Colors.grey[100],
@@ -81,6 +81,9 @@ class Home extends StatelessWidget {
                   Tab(
                     icon: Icon(Icons.view_quilt),
                   ),
+                  Tab(
+                    icon: Icon(Icons.view_quilt),
+                  ),
                 ],
               ),
             ),
@@ -90,6 +93,7 @@ class Home extends StatelessWidget {
                 BasicDemo(),
                 SliverGridDemos(),
                 SliverDemo(),
+                MaterialCompomentsDmoe(),
               ],
             ),
             drawer: DrawerDemo(),

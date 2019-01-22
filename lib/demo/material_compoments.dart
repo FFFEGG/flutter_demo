@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/demo/alterdialog_demo.dart';
 import 'package:flutter_demo/demo/bottom_sheet_demo.dart';
+import 'package:flutter_demo/demo/card_demo.dart';
 import 'package:flutter_demo/demo/check_box_demo.dart';
+import 'package:flutter_demo/demo/chip_demo.dart';
+import 'package:flutter_demo/demo/datatable_demo.dart';
 import 'package:flutter_demo/demo/datetime_demo.dart';
 import 'package:flutter_demo/demo/expansionpanel_demo.dart';
 import 'package:flutter_demo/demo/form_demo.dart';
+import 'package:flutter_demo/demo/paginated_datatable_demo.dart';
 import 'package:flutter_demo/demo/popup_menu_button_demo.dart';
 import 'package:flutter_demo/demo/radio_demo.dart';
 import 'package:flutter_demo/demo/simple_dialog_demo.dart';
 import 'package:flutter_demo/demo/slider_demo.dart';
 import 'package:flutter_demo/demo/snackbar_demo.dart';
+import 'package:flutter_demo/demo/stepper_demo.dart';
 import 'package:flutter_demo/demo/switch_demo.dart';
 
 class MaterialCompomentsDmoe extends StatelessWidget {
@@ -77,6 +82,27 @@ class MaterialCompomentsDmoe extends StatelessWidget {
           ListItem(
             title: 'DateTimeDemo',
             page: DateTimeDemo(),
+          ),
+          Divider(),
+          ListItem(
+            title: 'ChipDemo',
+            page: ChipDemo(),
+          ),
+          ListItem(
+            title: 'DataTableDemo',
+            page: DataTableDemo(),
+          ),
+          ListItem(
+            title: 'PaginatedDataTableDemo',
+            page: PaginatedDataTableDemo(),
+          ),
+          ListItem(
+            title: 'CardDemo',
+            page: CardDemo(),
+          ),
+          ListItem(
+            title: 'StepperDemo',
+            page: StepperDemo(),
           ),
         ],
       ),
