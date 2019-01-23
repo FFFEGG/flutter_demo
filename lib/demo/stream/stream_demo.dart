@@ -29,7 +29,7 @@ class _StreamDemoState extends State<StreamDemo> {
     _streamDemoSubscription =
         _streamDemo.stream.listen(onData, onDone: onDone, onError: onError);
 
-//    _streamDemo.stream.listen(onDataTwo,onDone: onDone,onError: onError);
+//  _streamDemo.stream.listen(onDataTwo,onDone: onDone,onError: onError);
 
     _sinkDemo = _streamDemo.sink;
 

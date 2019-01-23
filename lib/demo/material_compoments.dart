@@ -11,6 +11,7 @@ import 'package:flutter_demo/demo/form_demo.dart';
 import 'package:flutter_demo/demo/paginated_datatable_demo.dart';
 import 'package:flutter_demo/demo/popup_menu_button_demo.dart';
 import 'package:flutter_demo/demo/radio_demo.dart';
+import 'package:flutter_demo/demo/rxdart/RxDartDemo.dart';
 import 'package:flutter_demo/demo/simple_dialog_demo.dart';
 import 'package:flutter_demo/demo/slider_demo.dart';
 import 'package:flutter_demo/demo/snackbar_demo.dart';
@@ -129,11 +130,20 @@ class MaterialCompomentsDmoe extends StatelessWidget {
               title: 'StreamDemo',
               page: StreamDemo(),
             ),
+            Divider(),
+            Center(
+              child: Text('RxDart'),
+            ),
+            ListItem(
+              title: 'RxDartDemo',
+              page: RxDartDemo(),
+            ),
           ],
         ),
       ),
     );
   }
+
 }
 
 class ButtomDemo extends StatelessWidget {
