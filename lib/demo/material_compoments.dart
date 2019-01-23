@@ -9,6 +9,7 @@ import 'package:flutter_demo/demo/datatable_demo.dart';
 import 'package:flutter_demo/demo/datetime_demo.dart';
 import 'package:flutter_demo/demo/expansionpanel_demo.dart';
 import 'package:flutter_demo/demo/form_demo.dart';
+import 'package:flutter_demo/demo/http/http_demo.dart';
 import 'package:flutter_demo/demo/paginated_datatable_demo.dart';
 import 'package:flutter_demo/demo/popup_menu_button_demo.dart';
 import 'package:flutter_demo/demo/radio_demo.dart';
@@ -146,6 +147,14 @@ class MaterialCompomentsDmoe extends StatelessWidget {
             ListItem(
               title: 'BlocDemo',
               page: BlocDemo(),
+            ),
+            Divider(),
+            Center(
+              child: Text('HttpDemo'),
+            ),
+            ListItem(
+              title: 'HttpDemo',
+              page: HttpDemo(),
             ),
           ],
         ),
