@@ -17,6 +17,7 @@ import 'package:flutter_demo/demo/snackbar_demo.dart';
 import 'package:flutter_demo/demo/state/scoped_model_demo.dart';
 import 'package:flutter_demo/demo/state/state_management_demo.dart';
 import 'package:flutter_demo/demo/stepper_demo.dart';
+import 'package:flutter_demo/demo/stream/stream_demo.dart';
 import 'package:flutter_demo/demo/switch_demo.dart';
 
 class MaterialCompomentsDmoe extends StatelessWidget {
@@ -119,6 +120,14 @@ class MaterialCompomentsDmoe extends StatelessWidget {
             ListItem(
               title: 'ScopedModelDemo',
               page: ScopedModelDemo(),
+            ),
+            Divider(),
+            Center(
+              child: Text('Stream'),
+            ),
+            ListItem(
+              title: 'StreamDemo',
+              page: StreamDemo(),
             ),
           ],
         ),
