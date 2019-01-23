@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/demo/alterdialog_demo.dart';
+import 'package:flutter_demo/demo/animation/animation/animation_demo.dart';
 import 'package:flutter_demo/demo/bloc/bloc_demo.dart';
 import 'package:flutter_demo/demo/bottom_sheet_demo.dart';
 import 'package:flutter_demo/demo/card_demo.dart';
@@ -150,11 +151,19 @@ class MaterialCompomentsDmoe extends StatelessWidget {
             ),
             Divider(),
             Center(
-              child: Text('HttpDemo'),
+              child: Text('网络请求'),
             ),
             ListItem(
               title: 'HttpDemo',
               page: HttpDemo(),
+            ),
+            Divider(),
+            Center(
+              child: Text('动画'),
+            ),
+            ListItem(
+              title: 'AnimationDemo',
+              page: AnimationDemo(),
             ),
           ],
         ),
