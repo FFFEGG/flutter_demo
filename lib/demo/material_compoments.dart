@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/demo/alterdialog_demo.dart';
+import 'package:flutter_demo/demo/bloc/bloc_demo.dart';
 import 'package:flutter_demo/demo/bottom_sheet_demo.dart';
 import 'package:flutter_demo/demo/card_demo.dart';
 import 'package:flutter_demo/demo/check_box_demo.dart';
@@ -137,6 +138,14 @@ class MaterialCompomentsDmoe extends StatelessWidget {
             ListItem(
               title: 'RxDartDemo',
               page: RxDartDemo(),
+            ),
+            Divider(),
+            Center(
+              child: Text('BlocDemo'),
+            ),
+            ListItem(
+              title: 'BlocDemo',
+              page: BlocDemo(),
             ),
           ],
         ),
