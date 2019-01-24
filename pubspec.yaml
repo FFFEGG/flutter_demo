@@ -22,11 +22,13 @@ dependencies:
   cupertino_icons: ^0.1.2
   rxdart: 0.20.0
   http: 0.12.0+1
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  intl_translation: ^0.17.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec

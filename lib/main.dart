@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/demo/basic_demo.dart';
 import 'package:flutter_demo/demo/bottom_nabigation_demo.dart';
 import 'package:flutter_demo/demo/drawer_demo.dart';
-import 'package:flutter_demo/demo/form_demo.dart';
-import 'package:flutter_demo/demo/layout_demo.dart';
 import 'package:flutter_demo/demo/listviewdemo.dart';
 import 'package:flutter_demo/demo/material_compoments.dart';
-import 'package:flutter_demo/demo/navigator_demo.dart';
 import 'package:flutter_demo/demo/sliver_demo.dart';
-import 'package:flutter_demo/demo/view_demo.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'demo/i18n/i18n_localization_demo.dart';
 
 void main() => runApp(App());
 
@@ -16,6 +15,17 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: Locale('zh', 'CN'),
+//      locale: Locale('en', 'US'),
+      localizationsDelegates: [
+        LocalizationDemoDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('zh', 'CN'),
+        Locale('en', 'US'),
+      ],
       //mataerial风格
       home: Home(),
 //     home: NavigatorDemo(),
@@ -97,8 +107,6 @@ class Home extends StatelessWidget {
               ],
             ),
             drawer: DrawerDemo(),
-            bottomNavigationBar: BottomNavigationBarDemo()
-        )
-    );
+            bottomNavigationBar: BottomNavigationBarDemo()));
   }
 }

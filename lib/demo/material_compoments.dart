@@ -11,6 +11,7 @@ import 'package:flutter_demo/demo/datetime_demo.dart';
 import 'package:flutter_demo/demo/expansionpanel_demo.dart';
 import 'package:flutter_demo/demo/form_demo.dart';
 import 'package:flutter_demo/demo/http/http_demo.dart';
+import 'package:flutter_demo/demo/i18n/i18n_demo.dart';
 import 'package:flutter_demo/demo/paginated_datatable_demo.dart';
 import 'package:flutter_demo/demo/popup_menu_button_demo.dart';
 import 'package:flutter_demo/demo/radio_demo.dart';
@@ -23,6 +24,7 @@ import 'package:flutter_demo/demo/state/state_management_demo.dart';
 import 'package:flutter_demo/demo/stepper_demo.dart';
 import 'package:flutter_demo/demo/stream/stream_demo.dart';
 import 'package:flutter_demo/demo/switch_demo.dart';
+
 
 class MaterialCompomentsDmoe extends StatelessWidget {
   @override
@@ -164,6 +166,14 @@ class MaterialCompomentsDmoe extends StatelessWidget {
             ListItem(
               title: 'AnimationDemo',
               page: AnimationDemo(),
+            ),
+            Divider(),
+            Center(
+              child: Text('i18n'),
+            ),
+            ListItem(
+              title: 'i18nDemo',
+              page: i18nDemo(),
             ),
           ],
         ),
